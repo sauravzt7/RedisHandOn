@@ -38,8 +38,9 @@ const searchRepoBtnClickEventHandler = (e) => {
 
     // Verify if search value is not empty and then only call the API
     if (verifySearchTerm(search.value)) {
+        console.log(search.value)
         // Call our API to fetch the GitHub repositories information
-        fetch(`${window.location.href}/search-repos?query=${search.value}`)
+        fetch(`${window.location.href}search-repos?query=${search.value}`)
             .then((response) => response.json())
             .then((data) => {
                 // Access the p element to display the data
@@ -69,7 +70,7 @@ const searchIssueBtnClickEventHandler = (e) => {
     // Verify if search value is not empty and then only call the API
     if (verifySearchTerm(search.value)) {
         // Call our API to fetch the GitHub issues information
-        fetch(`${window.location.href}/search-issues?query=${search.value}`)
+        fetch(`${window.location.href}search-issues?query=${search.value}`)
             .then((response) => response.json())
             .then((data) => {
                 // Access the p element to display the data
@@ -99,7 +100,7 @@ const searchUserBtnClickEventHandler = (e) => {
     // Verify if search value is not empty and then only call the API
     if (verifySearchTerm(search.value)) {
         // Call our API to fetch the GitHub users information
-        fetch(`${window.location.href}/search-users?query=${search.value}`)
+        fetch(`${window.location.href}search-users?query=${search.value}`)
             .then((response) => response.json())
             .then((data) => {
                 // Access the p element to display the data
